@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="PreVisX PVX icon">
+  <defs>
+    <linearGradient id="previsGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#5eead4"/>
+      <stop offset="55%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect x="1.5" y="1.5" width="21" height="21" rx="5.5" fill="#0f172a"/>
+  <path d="M7 16.5V7.25c0-1.24 1.01-2.25 2.25-2.25h5.5c1.24 0 2.25 1.01 2.25 2.25v1.2l-2.4 2.4V8.5h-5.2v7.5h5.2v-1.5l2.4 2.4v1.35c0 1.24-1.01 2.25-2.25 2.25h-5.5A2.25 2.25 0 0 1 7 16.5z" fill="url(#previsGradient)"/>
+  <path d="M12 12.2l-2.2 2.2 2.2 2.2 2.2-2.2-2.2-2.2z" fill="#e2e8f0" opacity="0.9"/>
+  <circle cx="17.5" cy="6.3" r="1.8" fill="#e2e8f0" opacity="0.9"/>
+</svg>

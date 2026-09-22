@@ -1,0 +1,83 @@
+{
+  "name": "previsx",
+  "displayName": "PreVisX",
+  "description": "Project Readiness & Environment Verification System",
+  "version": "0.1.0",
+  "publisher": "",
+  "icon": "resources/previs.png",
+  "engines": {
+    "vscode": "^1.103.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "project readiness",
+    "environment",
+    "diagnostics",
+    "node",
+    "python",
+    "java",
+    "setup"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "previsx",
+          "title": "PreVisX",
+          "icon": "resources/previs-activity.svg"
+        }
+      ]
+    },
+    "views": {
+      "previsx": [
+        {
+          "type": "webview",
+          "id": "previsxSidebar",
+          "name": "PreVisX",
+          "contextualTitle": "PreVisX",
+          "icon": "resources/previs.svg"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "PREVISX.openSidebar",
+        "title": "PreVisX: Open Sidebar"
+      },
+      {
+        "command": "PREVISX.showMessage",
+        "title": "PreVisX: Show Status"
+      },
+      {
+        "command": "PREVISX.applySafeFixes",
+        "title": "PreVisX: Apply Safe Fixes"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "@types/vscode": "^1.103.0",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0",
+    "eslint": "^10.5.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.61.1"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  }
+}
