@@ -141,16 +141,16 @@ export function buildPrevisHtml(
         <title>PreVisX</title>
         <style nonce="${nonce}">
           :root {
-            --bg: #0f172a;
-            --panel: #111827;
+            --bg: var(--vscode-sideBar-background, #0f172a);
+            --panel: var(--vscode-editor-background, #111827);
             --panel-strong: #1f2937;
-            --border: #334155;
-            --text: #e2e8f0;
-            --muted: #94a3b8;
+            --border: var(--vscode-panel-border, #334155);
+            --text: var(--vscode-foreground, #e2e8f0);
+            --muted: var(--vscode-descriptionForeground, #94a3b8);
             --success: #34d399;
             --warning: #fbbf24;
             --danger: #f87171;
-            --primary: #38bdf8;
+            --primary: var(--vscode-textLink-foreground, #38bdf8);
           }
 
           body {

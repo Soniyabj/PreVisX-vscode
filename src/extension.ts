@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import { PrevisViewProvider } from './webview/PrevisViewProvider';
 import { detectProject } from './detectors/projectDetector';
-import { runReadinessCheck } from './checks/readinessCheck';
+import { runReadinessCheck, runProjectReadinessCheck } from './checks/readinessCheck';
 import { applySafeFix, createSafeFixPlans } from './fixes/safeFixes';
 
 export function activate(context: vscode.ExtensionContext) {
@@ -30,7 +30,7 @@ export function activate(context: vscode.ExtensionContext) {
     }
 
     const project = detectProject(workspaceRoot);
-    const summary = runReadinessCheck(project, workspaceRoot);
+    const summary = await runProjectReadinessCheck(project, workspaceRoot);
     const plans = createSafeFixPlans(project, summary, workspaceRoot);
     if (plans.length === 0) {
       vscode.window.showInformationMessage('PreVisX found no supported Safe Fixes for this workspace.');

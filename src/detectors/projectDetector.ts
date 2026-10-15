@@ -90,7 +90,7 @@ export function detectProject(rootPath: string): DetectedProject {
     rootPath,
     projectTypes,
     detectedFrameworks: Array.from(frameworkSet),
-    packageManager: files.includes('package-lock.json') ? 'npm' : undefined,
+    packageManager: files.includes('yarn.lock') ? 'yarn' : files.includes('pnpm-lock.yaml') ? 'pnpm' : files.includes('package-lock.json') ? 'npm' : undefined,
     languageSummary,
     confidence: Math.min(98, 50 + projectTypes.length * 20 + frameworkSet.size * 5),
     reasons,

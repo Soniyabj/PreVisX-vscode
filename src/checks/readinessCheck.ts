@@ -176,7 +176,12 @@ function checkConfiguration(project: DetectedProject, rootPath: string): CheckRe
   }
   const requiredFiles = [
     ...(project.projectTypes.includes('nodejs')
-      ? ['package.json', 'tsconfig.json', 'vite.config.ts', 'vite.config.js', 'next.config.js', 'next.config.mjs']
+      ? [
+          'package.json',
+          'tsconfig.json',
+          ...(project.detectedFrameworks.includes('vite') ? ['vite.config.ts', 'vite.config.js'] : []),
+          ...(project.detectedFrameworks.includes('nextjs') ? ['next.config.js', 'next.config.mjs'] : []),
+        ]
       : []),
     ...(project.projectTypes.includes('python')
       ? ['requirements.txt', 'pyproject.toml', 'Pipfile', 'setup.py', 'setup.cfg', 'manage.py']

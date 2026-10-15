@@ -3,13 +3,14 @@
   "displayName": "PreVisX",
   "description": "Project Readiness & Environment Verification System",
   "version": "0.1.0",
-  "publisher": "",
+  "publisher": "SoniyaBJ",
   "icon": "resources/previs.png",
   "engines": {
     "vscode": "^1.103.0"
   },
   "categories": [
-    "Other"
+    "Other",
+    "Linters"
   ],
   "keywords": [
     "project readiness",
@@ -20,6 +21,10 @@
     "java",
     "setup"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Soniyabj/PreVisX-vscode"
+  },
   "main": "./out/extension.js",
   "activationEvents": [],
   "contributes": {
