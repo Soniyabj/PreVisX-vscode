@@ -1,4 +1,7 @@
-# PreVisX
+# PreVisX      
+
+<img width="128" height="128" alt="previs" src="https://github.com/user-attachments/assets/b805806b-5969-49aa-bc7c-fdd4b19a0aad" />
+
 
 ## Project Readiness & Environment Verification System
 
